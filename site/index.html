@@ -1,9 +1,360 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>my site</title>
+	<title>myfair</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    margin: 0;
+     padding: 0;
+     font-family: 'Roboto', sans-serif;
+}
+ .navigation {
+     height: 55px;
+     z-index: 1;
+     background-color: #d6bd70;
+  background-color: #d6bd70;
+}
+ .brand {
+     position: absolute;
+     padding-left: 20px;
+     float: left;
+     line-height: 55px;
+     text-transform: uppercase;
+     font-size: 1.4em;
+}
+ .brand a, .brand a:visited {
+     color: #ffffff;
+     text-decoration: none;
+}
+ .nav-container {
+ 	text-align: center;
+     max-width: 1000px;
+     margin: 0 auto;
+
+}
+ nav {
+     float: right;
+}
+ nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+ nav ul li {
+     float: left;
+     position: relative;
+}
+ nav ul li a,nav ul li a:visited {
+     display: block;
+     padding: 0 20px;
+     line-height: 55px;
+     color: #d6bd70;
+     text-decoration: none;
+}
+ nav ul li a{
+     background: transparent;
+     color: #FFF;
+}
+ nav ul li a:hover, nav ul li a:visited:hover {
+     background: #;
+     color: #ffffff;
+}
+ .navbar-dropdown li a{
+     background: #;
+}
+ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+     padding-left: 4px;
+     content: ' \025BE';
+}
+ nav ul li ul li {
+     min-width: 190px;
+}
+ nav ul li ul li a {
+     padding: 15px;
+     line-height: 20px;
+}
+ .navbar-dropdown {
+     position: absolute;
+     display: none;
+     z-index: 1;
+     background: #fff;
+     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+}
+/* Mobile navigation */
+ .nav-mobile {
+     display: none;
+     position: absolute;
+     top: 0;
+     right: 0;
+     background: transparent;
+     height: 55px;
+     width: 70px;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#d6bd70;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+.float1{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	left:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float1{
+	margin-top:16px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #d6bd70;
+  border: none;
+  border-radius: 15px;
+}
+
+.button:hover {background-color: #d6bd70}
+
+.button:active {
+  background-color: #d6bd70;
+  transform: translateY(4px);
+}
+.button1 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:black ;
+  border: none;
+  border-radius: 15px;
+  border: 2px solid #d6bd70;
+  
+}
+
+.button1:hover {background-color:}
+
+.button1:active {
+  background-color: black;
+
+  transform: translateY(4px);
+}
+ @media only screen and (max-width: 800px) {
+     .nav-mobile {
+         display: block;
+
+    }
+     nav {
+         width: 100%;
+         padding: 55px 0 15px;
+
+    }
+     nav ul {
+         display: none;
+    }
+     nav ul li {
+         float:none;
+          
+    }
+     nav ul li a {
+         padding: 15px;
+         line-height: 20px;
+         color: #ffff00;
+         font-size: 20px;
+         background: black;
+    }
+     nav ul li ul li a {
+         padding-left: 30px;
+    }
+     .navbar-dropdown {
+         position: static;
+}
+ @media screen and (min-width:800px) {
+     .nav-list {
+         display: block !important;
+    }
+}
+ #navbar-toggle {
+     position: absolute;
+     left: 18px;
+     top: 15px;
+     cursor: pointer;
+     padding: 10px 35px 16px 0px;
+}
+ #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+     cursor: pointer;
+     border-radius: 1px;
+     height: 3px;
+     width: 30px;
+     background: #ffffff;
+     position: absolute;
+     display: block;
+     content: '';
+     transition: all 300ms ease-in-out;
+}
+ #navbar-toggle span:before {
+     top: -10px;
+}
+ #navbar-toggle span:after {
+     bottom: -10px;
+}
+ #navbar-toggle.active span {
+     background-color: transparent;
+}
+ #navbar-toggle.active span:before, #navbar-toggle.active span:after {
+     top: 0;
+}
+ #navbar-toggle.active span:before {
+     transform: rotate(45deg);
+}
+ #navbar-toggle.active span:after {
+     transform: rotate(-45deg);
+}
+ 
+
+</style>
 <body>
-<h1 style="color: #d6bd70">UPENDOMYFAIR</h1>
+	<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Upendomyfair</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#!">Home</a>
+        </li>
+        <li>
+          <a href="#!">Investment Plans</a>
+        </li>
+        <li>
+          <a href="#!">About us</a>
+          
+        </li>
+        <li>
+          <a href="#!">Login</a>
+        </li>
+        <li>
+          <a href="#!">Register</a>
+        </li>
+        <li>
+          <a href="#!">Translate</a>
+        </li>
+        <li>
+          <a href="#!">Faq</a>
+        </li>
+  </ul>
+    </nav>
+  </div>
+</section>
+
+
+<a href="#" class="float1" target="_blank">
+<i class="fa fa-whatsapp my-float1"></i>
+</a>
+
+
+
+<a href="#" class="float" target="_blank">
+<i class="fa fa-comment my-float"></i>
+</a>
+
+
+<section style="background: black;">
+	<br>
+	<h2 style="color: #d6bd70; padding-left: 12px;">HEDGES FUNDS ASSETS MANAGEMENT.</h2>
+
+	<p style="color: white; padding-left: 12px;">In collaboration with 36south capital advisors Alken assets management,state Street global advisors and other partnered financial companies we remain at the forefront of  assets management and wealth growth we are licensed to engage in all forms of financial market  using the best tools at our disposal to eliminate risk and maximize profits.</p>
+
+<center>
+<img width="239" height="180" src="dd.jpeg"></center>
+<br>
+<br>
+<center>
+<button class="button">Join Us<i aria-hidden="true" class="fa fa-chevron-right"></i></button>
+<br>
+<br>
+<button class="button1">Invest Now<i aria-hidden="true" class="fa fa-chevron-right"></i></button>
+</center>
+<br>
+</section>
+
+
 </body>
+<script>
+		(function($) { 
+  $(function() { 
+
+    //  open and close nav 
+    $('#navbar-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+
+
+    // Hamburger toggle
+    $('#navbar-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+
+
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+      // Close dropdown when select another dropdown
+      $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+      e.stopPropagation();
+    });
+
+
+    // Click outside the dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.navbar-dropdown').hide();
+    });
+  }); 
+})(jQuery); 
+</script>
 </html>
