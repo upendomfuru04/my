@@ -14,6 +14,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
+
 </head>
 <style>
  @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -103,6 +107,12 @@ body{
      background: transparent;
      height: 55px;
      width: 70px;
+}
+p{
+  font-size: 20px
+}
+h6{
+ font-size: 15px
 }
 
 .float{
@@ -265,6 +275,130 @@ footer .glyphicon{
 	margin-bottom: 20px;
 	color: #d6bd70;
 }
+
+
+.testimonial {
+  background-color: white;
+  text-align: center;
+  padding: 30px 30px 50px;
+  margin: 100px 15px 160px;
+  position: relative;
+}
+
+.testimonial::before,
+.testimonial::after {
+  content: "";
+  border-top: 40px solid white;
+  border-right: 125px solid transparent;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonial::after {
+  border-right: none;
+  border-left: 125px solid transparent;
+  left: auto;
+  right: 0;
+}
+
+.testimonial .icon {
+  display: inline-block;
+  font-size: 80px;
+  color: #d6bd70;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.testimonial .description {
+  font-size: 22px;
+  color: #777;
+  text-align: justify;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.testimonial .testimonial-content {
+  width: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.testimonial .pic {
+  display: inline-block;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 4px #d6bd70;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.testimonial .pic img {
+  width: 100%;
+  height: 128px;
+}
+
+.testimonial .name {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  margin: 10px 0 5px 0;
+}
+
+.testimonial .title {
+  display: block;
+  font-size: 14px;
+  color: #d6bd70;
+}
+
+.owl-controls {
+  margin-top: 20px;
+}
+
+.owl-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.owl-page {
+  height: 10px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10%;
+}
+
+.owl-page:hover,
+.owl-page.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.owl-page:not(first-item) {
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
@@ -552,7 +686,6 @@ p.service_text{
 
 
 
-
 @media only screen and (min-width:100px) and (max-width:500px){
   img{
   width: 200px;
@@ -722,7 +855,9 @@ p.service_text{
 
 <section style="background: black;">
 	<br>
-	<h2 style="color: #d6bd70; padding-left: 12px;">HEDGES FUNDS ASSETS MANAGEMENT.</h2>
+  <div class="section-head">
+          <h4><span style="color: #d6bd70">HEDGES FUNDS ASSETS </span> MANAGEMENT.</h4>
+        </div>
 
 	<p style="color: white; padding-left: 12px;">In collaboration with 36south capital advisors Alken assets management,state Street global advisors and other partnered financial companies we remain at the forefront of  assets management and wealth growth we are licensed to engage in all forms of financial market  using the best tools at our disposal to eliminate risk and maximize profits.</p>
 
@@ -794,6 +929,132 @@ p.service_text{
 
 
 </section>
+
+
+<br>
+
+
+ <div class="section-head">
+          <h4><span style="color: #d6bd70">Our Expert Partners </span></h4>
+
+        </div>
+
+
+
+<div class="demo">
+  <div class="container">
+    <div class="row">
+      <div id="testimonial-slider" class="owl-carousel">
+        <div class="testimonial">
+          <span  class="icon fa fa-quote-left"></span>
+          <p class="description">
+            Coming together is a beginning. Keeping together is progress. Working together is success.
+          </p>
+          <div class="testimonial-content">
+            <div class="pic">
+              <img src="fafa.jpg" alt="">
+            </div>
+            <h3 class="name">upendo myfair</h3>
+            <span class="title">Project Manager</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <span class="icon fa fa-quote-left"></span>
+          <p class="description">
+            Alone we can do so little, together we can do so much.
+          </p>
+          <div class="testimonial-content">
+            <div class="pic">
+              <img src="fafa.jpg"  alt="">
+            </div>
+            <h3 class="name">upendo myfair</h3>
+            <span class="title">Web Developer</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <span class="icon fa fa-quote-left"></span>
+          <p class="description">
+           I invite everyone to choose forgiveness rather than division, teamwork over personal ambition.
+          </p>
+          <div class="testimonial-content">
+            <div class="pic">
+              <img src="fafa.jpg"  alt="">
+            </div>
+            <h3 class="name">upendo myfair</h3>
+            <span class="title">Web Developer</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <span class="icon fa fa-quote-left"></span>
+          <p class="description">
+            If everyone is moving forward together, then success takes care of itself.
+          </p>
+          <div class="testimonial-content">
+            <div class="pic">
+              <img src="fafa.jpg"  alt="">
+            </div>
+            <h3 class="name">upendo myfair</h3>
+            <span class="title">Web Developer</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <span class="icon fa fa-quote-left"></span>
+          <p class="description">
+            Efficiency is doing better that what is already being done.
+          </p>
+          <div class="testimonial-content">
+            <div class="pic">
+              <img src="fafa.jpg"  alt="">
+            </div>
+            <h3 class="name">upendo myfair</h3>
+            <span class="title">Web Developer</span>
+          </div>
+        </div>
+                <div class="testimonial">
+          <span class="icon fa fa-quote-left"></span>
+          <p class="description">
+           The value of achievement lies in the achieving.
+          </p>
+          <div class="testimonial-content">
+            <div class="pic">
+              <img src="fafa.jpg"  alt="">
+            </div>
+            <h3 class="name">Upendo myfair</h3>
+            <span class="title">Web Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -906,40 +1167,40 @@ p.service_text{
           <p style="color: white">You Need Profits We Know Profits</p>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-user" aria-hidden="true"></i></span>
-            <h6>Support Service</h6>
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-user" aria-hidden="true"></i></span><b>
+            <h6>Support Service</h6></b>
             <p>Our customer service team is ready to assist and address in any challenge you might have. As soon as we can.</p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-            <h6>Real-Time Trade Settlement</h6>
+          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-clock-o" aria-hidden="true"></i></span><b>
+            <h6>Real-Time Trade Settlement</h6></b>
             <p>With our partnered team of top portfolio managers and risk management officers we automatically settle trades in real-time. You are guaranteed of good exit positions.</p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-money" aria-hidden="true"></i></span>
-            <h6>Stable Returns</h6>
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-money" aria-hidden="true"></i></span><b>
+            <h6>Stable Returns</h6></b>
             <p>We provide the best Trading Contract and Investment profitability return with our carefully prepared and time tested investment strategy.</p>
           </div>
         </div>
          <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-balance-scale"></i></span>
-            <h6>Stability</h6>
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-balance-scale"></i></span><b>
+            <h6>Stability</h6></b>
             <p>Enjoy profit generation and account stability from your investments continiously.</p>
           </div>
         </div>
          <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span><b>
             <h6>
-Worldwide Availability</h6>
+Worldwide Availability</h6></b>
             <p>We provide global expertise with professionals working from our office to investors from any part of the world.</p>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-bullhorn" aria-hidden="true"></i></span>
+          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-bullhorn" aria-hidden="true"></i></span><b>
             <h6>
-Exceptional Communication</h6>
+Exceptional Communication</h6></b>
             <p>Holding back technology to preserve broken business models is like allowing blacksmiths to veto the internal combustion engine in order to protect their horseshoes.</p>
           </div></div>
         </div>  
@@ -1186,21 +1447,58 @@ $('#number3').jQuerySimpleCounter({end: +115,duration: 2000});
 
 
 
+<div class="section-head">
+          <h4><span style="color: #d6bd70">Affiliate programme</span></h4>
+        </div>
+<center>
+<div style="width: 320px;
+  padding: 15px;
+  background-color: #d6bd70;
+  box-shadow: 10px 10px;">
+  <br>
+<div class="section-head">
+          <h4><span style="color: black">10% referral bonus</span></h4>
+       
 
+         <p style="font-size: 22px; color: black" >Lets expand our company and your investments ! Refer all you can and get more earnings.</p>
+         <center><button style="
+  color: black;
+  border: 2px solid #555555;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+}" class="button">REFER NOW</button>
+</center> 
+</div>
 
+</center>
 
+<br>
+<br>
 
+<div class="section-head">
+          <h4><span style="color: #d6bd70">CONTACT</span></h4>
+        </div>
+        <h1 style="color: #d6bd70; text-align: center; font-size: 39px">+255 657513016</h1>
+        <p style=" text-align: center;">Tanzania, Dar es salaam, Posta, Samora Avenue Street, Apt No: 302, Plot No: 568, Block No: 48</p>
 
-
-
-
-
-
-
-
-
-
-
+        <a href="#" style="  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  color: #d6bd70" class="fa fa-envelope"></a>
+<a href="#" style="  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%; color: #d6bd70" class="fa fa-whatsapp"></a>
 
 
 
@@ -1262,9 +1560,23 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+  $("#testimonial-slider").owlCarousel({
+    items: 3,
+    itemsDesktop:[1000,3],
+    itemsDesktopSmall:[979,2],
+    itemsTablet:[768, 2],
+    itemsMobile:[650, 1],
+    pagination: true,
+    autoPlay: true
+  });
+});
+
 </script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
 
 
