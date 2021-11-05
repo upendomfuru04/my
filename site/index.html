@@ -26,6 +26,42 @@ body{
      padding: 0;
      font-family: 'Roboto', sans-serif;
 }
+
+
+
+.accordion {
+  background-color: black;
+  color: #d6bd70;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  background-color: black;
+  max-height: 0;
+  color: white;
+  overflow: hidden;
+  font-size: 9px;
+  transition: max-height 0.2s ease-out;
+}
  .navigation {
      height: 55px;
      z-index: 1;
@@ -936,7 +972,9 @@ p.service_text{
 
  <div class="section-head">
           <h4><span style="color: #d6bd70">Our Expert Partners </span></h4>
-
+<p class="description">
+            Coming together is a beginning. Keeping together is progress. Working together is success.
+          </p>
         </div>
 
 
@@ -1502,6 +1540,59 @@ $('#number3').jQuerySimpleCounter({end: +115,duration: 2000});
 
 
 
+<div class="section-head">
+          <h4><span style="color: #d6bd70">You Invest We Manage</span></h4>
+        </div>
+
+<p style="margin: 10px 0 16px;color: #d6bd70;text-align: center"><a href="#">Log In</a> | <a href="#">Register</a> | +255 65751 3016</p></div>
+
+
+<button class="accordion">What is hedgesfunds asset management ?</button>
+<div class="panel">
+  <p>Hedgesfunds is owned by a group of top portfolio managers and risk investment officers who know exactly what it takes to earn the most from capital market. Our company provides a full investment service focused on the Forex cryptocurrency and stock trading market. Each trader in our company has more than 7 years of trading experience and successful trading records, as we know that is the exact point that support our company stability and profitability.</p>
+</div>
+
+<button class="accordion">Is hedgesfunds Asset Management officially registered?</button>
+<div class="panel">
+  <p>Yes.Hedgesfunds Asset Management is a legally registered investment company incorporated in UK and open to international clients.</p>
+</div>
+
+<button class="accordion">How do I create my account with hedgesfunds Asset Management?</button>
+<div class="panel">
+  <p>Registration process is very easy and will take a few moments to complete. Simply click “Register” button on the top right of our website and fill in all the required fields.</p>
+</div>
+<button class="accordion">What do I need to start trading or investing with Hedgesfunds Asset Management?</button>
+<div class="panel">
+  <p>First of all, you need to register a new account, make a deposit of at least $50 through the popular payment systems before proceeding with investment.</p>
+</div>
+<button class="accordion">What payment methods can I use to make a deposit?</button>
+<div class="panel">
+  <p>Currently we accept Bitcoin, Ethereum and usdt tether coin</p>
+</div>
+<button class="accordion">Do I get my investment principal back?</button>
+<div class="panel">
+  <p>Yes, on expiration of the activated portfolio, the capital will be returned to your trading account.</p>
+</div>
+<button class="accordion">What is the minimum amount for withdrawal?</button>
+<div class="panel">
+  <p>The minimum withdrawal amount is $50</p>
+</div>
+<button class="accordion">Do you have an affiliate program?</button>
+<div class="panel">
+  <p>Yes, you will get 10% referral commission on your referrals.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <i aria-hidden="true" class="icon icon-down-arrow1"></i>	
@@ -1510,7 +1601,7 @@ $('#number3').jQuerySimpleCounter({end: +115,duration: 2000});
 	<a href="#mypage" title="To Top">
 		<span class="glyphicon glyphicon-chevron-up"></span>
 	</a>
-	<p>Upendomyfair</p>
+	<p>© Copyright - Upendomyfair 2021</p>
 </footer>
 </body>
 <script>
@@ -1572,6 +1663,21 @@ $(document).ready(function() {
   });
 });
 
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
