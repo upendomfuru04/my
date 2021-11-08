@@ -5,6 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+     
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet" />
+
 </head>
 <style>
    
@@ -94,6 +108,154 @@ body {
 .cross .line:nth-child(3) {
   transform: rotate(45deg) translate(-7px, -5px);
 }
+
+
+
+.text-box{
+	margin-top: 15%;
+	font-size: 17px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+
+
+.text-box h4{
+	padding-left: 12px;
+	color: #d6bd70;
+}
+
+.text-box h1{
+	font-size: 30px;
+	line-height: 40px;
+	color: black;
+}
+.text-box p{
+	font-size: 19px;
+	line-height: 30px;
+	padding-left: 12px;
+}
+
+.text-box a{
+	margin-top: 20px;
+	display: inline-block;
+	border-radius: 6px;
+	border: 2px solid #d6bd70;
+	color: #d6bd70;
+	padding: 10px 20px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.text-box .btn{
+	background: #d6bd70;
+	color: #000;
+	margin-left: 20px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.content-box {
+    background-color: #fafafb;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.15);
+    transition: all .3s ease-in-out;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    height: 200px;
+}
+.content-box .finbyz-icon {
+    height: 100px;
+    width: 100px;
+    display: inline;
+}
+.footer {
+  width: 100%;
+  position: relative;
+  height: auto;
+  background-color: #070617;
+}
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+}
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: rgba(255,255,255,0.2);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+}
+.footer .col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .col ul li {
+  color: #999999;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px 0px 5px 0px;
+  cursor: pointer;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+}
+.social ul li {
+  display: inline-block;
+  padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+  color: #ffffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+}
+.clearfix {
+  clear: both;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .footer .col {
+      width: 50%;
+      flex-direction: row;
+      margin: 0 0 10px 0;
+    }
+    .footer .col h1 {
+      font-size: 14px;
+    }
+    .footer .col ul li {
+      font-size: 13px;
+    }
+}
+@media only screen and (max-width: 340px) {
+  .footer .col {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 /*only for mobile and tablets devices*/
 @media (max-width: 767px) {
@@ -292,7 +454,17 @@ textarea {
 </nav>
 
  
+<div class="text-box">
+	<h4>Our aim is to unlock our clients' financial freedom</h4>
 
+
+	<h1>High Returns With Calculated Risk</h1>
+<p>Proinvest is intended for people willing to achieve wealth and financial freedom but unable to do so because they're not financial experts.</p>
+
+<a href="">CREATE ACCOUNT</a>
+<a href="" class="btn">LOGIN</a>
+
+</div>
 
  
 
@@ -300,10 +472,10 @@ textarea {
 
  <img style="width: 100%" src="https://userasset.hedgesfunds.com/assets/dist/img/About-us-banner-img.png">
 
- <h3>Get to know us</h3>
+ <h2 style="color: #d6bd70; padding-left: 12px">Get to know us</h2>
 
-<h4  data-wow-delay="0.3s">About ProInvest Fund</h4>
-                        <p data-wow-delay="0.4s">
+<h4 style="text-align: center; padding-left: 12px"  data-wow-delay="0.3s">About ProInvest Fund</h4>
+                        <p  data-wow-delay="0.4s" style="font-size: 19px; padding-left: 12px">
                         <span xss="removed">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum illum tempora? Ducimus eum culpa voluptates dolorem dolorum et sit nisi, mollitia animi porro fuga sequi, molestias repellat excepturi nobis eum culpa voluptates dolorem dolorum et.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum illum tempora? Ducimus eum culpa voluptates dolorem dolorum et sit nisi, mollitia animi porro fuga sequi, molestias repellat excepturi nobis eum culpa voluptates dolorem dolorum et.</span>                        </p>
 
 
@@ -311,19 +483,119 @@ textarea {
 
 
 
+<br>
+<div class="container">
+                <h2 align="center"><a href="#" target= "_blank">Our investment Plans  </a></h2>
+        
+</div>
+<div class="container">
+<div class="row">	
+	<div class="col-md-4 text-center" style="opacity: 1;">
+	<div class="content-box">
+	 <h3 style="font-size: 42px"><a href="#">Start</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">3.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 50.00 - USD 999.00</h5>
+                             <a href="#" class="icon_foot">
+                            <i  class="fa fa-long-arrow-right"></i>
+                        </a>
+	</div>
+	</div>
+	<div class="col-md-4" style="opacity: 1;">
+		<div class="content-box text-center">
+		<h3 style="font-size: 36px; font-weight: 500"><a href="#">Promo Package 1</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">10.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 500.00 - USD 1,999.00</h5>
+                             <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+		</div>
+	</div>
+	<div class="col-md-4" style="opacity: 1;">
+		<div class="content-box text-center">
+		<h3 style="font-size: 36px; font-weight: 500"><a href="#">Promo Package 2</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">20.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 2,000.00 - USD 29,999.00</h5>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+		</div>
+	</div>
+	<div class="col-md-4" style="opacity: 1;">
+		<div class="content-box text-center">
+		<h3 style="font-size: 36px; font-weight: 500"><a href="#">Promo Package 1</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">10.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 500.00 - USD 1,999.00</h5>
+                             <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+		</div>
+	</div>
+	<div class="col-md-4" style="opacity: 1;">
+		<div class="content-box text-center">
+		<h3 style="font-size: 36px; font-weight: 500"><a href="#">Promo Package 2</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">20.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 2,000.00 - USD 29,999.00</h5>
+                        <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+		</div>
+	</div>
+	<div class="col-md-4" style="opacity: 1;">
+		<div class="content-box text-center">
+		<h3 style="font-size: 36px;"><a href="#">Promo Package 1</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">10.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 500.00 - USD 1,999.00</h5>
+                             <a href="#" class="icon_foot">
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+		</div>
+	</div>
+	<div class="col-md-4" style="opacity: 1;">
+		<div class="content-box text-center">
+		<h3 style="font-size: 36px; "><a href="#">Promo Package 2</a></h3>
+                            <h2 style="font-size: 26px; font-weight: 500" class="black">20.00% Daily</h2>
+                            <h5 style="font-size: 22px; font-weight: 500">USD 2,000.00 - USD 29,999.00</h5>
+                        <a href="#" class="icon_foot">
+                            <i  class="fa fa-long-arrow-right"></i>
+                        </a>
+		</div>
+	</div>
+</div>
+</div>
 
 
 
+   
 
 <br>
+<br>
+<h4 style="color: #d6bd70; font-weight: 600;padding-left: 12px; font-size: 19px">Sign up and become an affiliate today</h4>
+
+<h2 style="font-weight: 600;padding-left: 12px ">Affiliate Program For You</h2>
+
+
+<p style="padding-left: 12px;font-size: 18px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum illum tempora? Ducimus eum culpa voluptates dolorem dolorum et sit nisi, mollitia animi porro fuga sequi, molestias repellat excepturi nobis eum culpa voluptates dolorem dolorum et.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum illum tempora? Ducimus eum culpa voluptates dolorem dolorum et sit nisi, mollitia animi porro fuga sequi, molestias repellat excepturi nobis eum culpa voluptates dolorem dolorum et.</p>
+
+
+<img style="width: 100%"  src="https://userasset.hedgesfunds.com/assets/dist/img/affiliate-program.png">
+
+
+
+
+
+
+
+
+
+
 
 <div class="container">
 	<div class="row">
-			<h1 style="color: #d6bd70; font-size: 30px">contact us</h1>
+			<h1 style="color: #d6bd70; font-size: 30px; padding-left: 12px">contact us</h1>
 	</div>
 	<h1 style="color: black; font-size: 20px">Speak With Us</h1>
 	<div class="row">
-			<h4 style="text-align:center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</h4>
+			<h4 style="padding-left: 12px ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</h4>
 	</div>
 	<div class="row input-container">
 			<div class="col-xs-12">
@@ -356,7 +628,32 @@ textarea {
 	</div>
 </div>
 
-
+<div class="footer">
+  <div class="contain">
+  	<br>
+  	<br>
+  	<h3 style="color: #d6bd70;padding-left: 15px">UPENDOMYFAIR</h3>
+   <p style="padding-left: 15px;font-size: 14px; color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus voluptatibus neque illo id repellat quisquam? Autem expedita earum quae laborum ipsum ad.</p>
+  <div class="col">
+    <h1>PRIVACY & T&Cs</h1>
+    <ul>
+      <li>Privacy Policy</li>
+      <li>T&C's</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>CONTACT US</h1>
+    <ul>
+      <li>Hedges Funds</li>
+      <li>25 Savile row, London United Kingdom</li>
+      <li>+44 7441 427425</li>
+      <li>support@hedgesfunds</li>
+    </ul>
+  </div>
+  
+<div class="clearfix"></div>
+</div>
+</div>
 
 
 
