@@ -60,36 +60,189 @@
             font-weight: bold;
 		}
 
-		.navbar-nav a{
-			font-family: poppins;
-			font-size: 18px;
-			text-transform: uppercase;
-			font-weight: bold;
+		*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
-		}
+.html{
+    font-size: 62.5%;
+}
 
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
 
-		  .navbar-brand{
-		  	font-size: 25px;
-		  	font-weight: bold;
-		  	letter-spacing: 2px;
-		  }
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
 
-		  .navbar-nav{
-		  	text-align: center;
-		  }
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
 
-		  .nav-link{
-		  	padding: .2rem 1rem;
-		  }
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
 
-		  .nav-link.active, .nav-link:focus{
-		  	color: #d6bd60 !important;
-		  }
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
 
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #d6bd60;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
 		  
 
-		   .img-card {
+		.img-card {
         width:300px;
         position: relative;
         border-radius: 5px;
@@ -401,6 +554,7 @@
   color:inherit;
   text-decoration:none;
   opacity:0.8;
+  color: #d6bd60;
 }
 
 .footer-basic ul a:hover {
@@ -410,6 +564,7 @@
 .footer-basic .social {
   text-align:center;
   padding-bottom:25px;
+  color: #d6bd60;
 }
 
 .footer-basic .social > a {
@@ -420,7 +575,7 @@
   display:inline-block;
   text-align:center;
   border-radius:50%;
-  border:1px solid #ccc;
+  border:1px solid #d6bd60;
   margin:0 8px;
   color:inherit;
   opacity:0.75;
@@ -434,40 +589,56 @@
   margin-top:15px;
   text-align:center;
   font-size:13px;
-  color:#aaa;
+  color:#d6bd60;
   margin-bottom:0;
 }
 
+.foot{
+	width: 100%;
+	bottom: 0;
+	color: #000;
+	padding: 100px 0 30px; 
+	font-size: 13px;
+}
+
+.row{
+	width: 85%;margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.col{
+	flex-basis: 25%;
+	padding: 10px;
+	font-weight: bold;
+}
 
 
 	</style>
 
 
-	<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Tukiio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active"  href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-        <button style="border: 2px solid #d6bd60; font-weight: bold;" class="btn btn-outline" type="submit">Login</button>
-    </div>
-  </div>
-</nav>
+	<nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+                <li style="border: 2px solid #d6bd60; font-weight: bold; padding: 2px 30px;"><a href="#">Login</a></li>
+
+            </ul>
+            <h1 class="logo">Navbar</h1>
+        </div>
+    </nav>
+
 
 
 <div id="carouselExampleCaptions" class="carousel slide">
@@ -482,23 +653,23 @@
       <div class="carousel-caption">
         <h5 class="animated bounceInRight" style="animation-delay: 1s" >First slide label</h5>
         <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">Some representative placeholder content for the first slide.</p>
-        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">see more</a></p>
+        <p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">see more</a></p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="4.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
-        <h5 class="animated bounceInRight" style="animation-delay: 1s" >First slide label</h5>
-        <p class="animated slideInDown d-none d-md-block" style="animation-delay: 2s">Some representative placeholder content for the first slide.</p>
-        <p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">register</a></p>
+         <h5 class="animated bounceInRight" style="animation-delay: 1s" >First slide label</h5>
+        <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">Some representative placeholder content for the first slide.</p>
+        <p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">see more</a></p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
-        <h5 class="animated bounceInRight" style="animation-delay: 1s" >First slide label</h5>
+         <h5 class="animated bounceInRight" style="animation-delay: 1s" >First slide label</h5>
         <p class="animated bounceInLeft d-none d-md-block" style="animation-delay: 2s">Some representative placeholder content for the first slide.</p>
-        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">see more</a></p>
+        <p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">see more</a></p>
       </div>
     </div>
   </div>
@@ -525,7 +696,7 @@
                         <div class="card-content">
                             <div class="card-image">
                                 <span class="card-title"><div class="int">
-                                   <p>JUNE</p>
+                                   <p>10<br><span>jun</span></p>
                                  </div></span>
                                 <img src="https://www.dropbox.com/s/u330jm6faybxrvb/fog-3461451_640.jpg?raw=1"/>
                             </div>
@@ -717,8 +888,8 @@ Kijitonyama Grounds, Dar Es Salaam, Tanzania.
             </ul>
 
         </div>
-
-        <div style="background: #aaa" class="card-category-2">
+<section style="background: #f5fefd" >
+        <div class="card-category-2">
             
             <span class="category-name"></span> <br/><br/>
             
@@ -921,11 +1092,37 @@ Kijitonyama Grounds, Dar Es Salaam, Tanzania.
  <br>
         <br>
         </div>
-       
+
+        </section>
+<section class="foot">      
+<div class="row">
+	<div class="col">
+		<h3>About, Terms & Privacy</h3>
+		<p>About Tukiio</p>
+		<p>Terms & Conditions</p>
+		<p>Privacy Policy</p>
+		<p>Refund Policy</p>
+	</div>
 
 
+	<div class="col">
+		<h3>Address & Contacts</h3>
+		<p>DEPHICS COMPANY LIMITED,<br>
+			P. O. Box 53796 Dar es Salaam,<br>
+            Derm Plaza – 13th Floor,<br>
+            New Bagamoyo Road, Makumbusho Street</p>
+		<p>Email: info@dephics.co.tz</p>
+		<p>Mobile: (+255) 752 030 032 / 712 254 966</p>
+	</div>
+	<div class="col">
+		<h3>Our Apps</h3>
+		<p>Download our application from</p>
+		<p><img src="icon.jpeg"></p>
+	</div>
+</div>
 
 
+</section> 
 
 <div class="footer-basic">
         <footer>
